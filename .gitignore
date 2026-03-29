@@ -1,0 +1,27 @@
+# Dependencias y Build
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Mac OS 
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+.apdisk
+
+# Editor y VS Code
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Vite y Secretos
+*.timestamp-*
+.env
+.env.*.local

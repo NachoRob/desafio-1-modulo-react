@@ -1,0 +1,54 @@
+:root {
+  --text-h: #f3f4f6; /* Color claro para que resalte sobre el fondo oscuro */
+}
+
+
+/* Header con imagen y estilos de texto */
+.hero-pizza {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                    url('./assets/Header.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+}
+
+/* Modifica el título (Brand) */
+.hero-pizza .navbar-brand {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Modifica el lema (Text) */
+.hero-pizza .navbar-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  display: block; 
+}
+
+
+.hero-pizza hr {
+  width: 80%;            
+  border-top: 2px solid #f3f4f6 !important;
+  margin: 20px 20px;
+  opacity: 0.4;
+}
+
+/* Navigationbar */
+
+.mi-navbar {
+  background-color: #15161b
+}
+
+/* Pizza Cards*/
+.pizza-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
