@@ -1,6 +1,8 @@
 import Home from './components/Home'
-import Footer from './components/Footer.jsx'
-import Navigationbar from './components/Navbar.jsx'
+import Footer from './components/Footer'
+import Navigationbar from './components/Navbar'
+import RegisterPage from './components/Register'
+import Login from './components/Login'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -12,7 +14,9 @@ function App() {
   return (
     <>
       <Navigationbar />
-      <Home />
+      {/*<Home />
+      <RegisterPage />*/}
+      <Login />
       <Footer />
     </>
   )
