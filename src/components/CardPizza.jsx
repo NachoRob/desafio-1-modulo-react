@@ -1,12 +1,12 @@
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import ListGroup from 'react-bootstrap/ListGroup';
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import ListGroup from "react-bootstrap/ListGroup";
 
 const CardPizza = ({ name, price, ingredients, img }) => {
   return (
     <Card className="mx-auto my-3">
       <Card.Img variant="top" src={img} />
-      
+
       <Card.Body>
         <Card.Title className="fw-bold fs-4">Pizza {name}</Card.Title>
       </Card.Body>
@@ -14,9 +14,11 @@ const CardPizza = ({ name, price, ingredients, img }) => {
       <ListGroup className="list-group-flush text-center">
         <ListGroup.Item>
           <p className="text-muted mb-1">Ingredientes:</p>
-          <p className="fs-6">
-            🍕 {ingredients.join(", ")}
-          </p>
+          <ul className="list-unstyled">
+            {ingredients.map((ingrediente) => (
+              <li key={ingrediente}>🍕 {ingrediente}</li>
+            ))}
+          </ul>
         </ListGroup.Item>
         <ListGroup.Item>
           <h4 className="fw-bold">Precio: ${price.toLocaleString()}</h4>
