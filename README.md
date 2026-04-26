@@ -4,6 +4,12 @@
 
 ---
 
+# Ver el Proyecto en Vivo:
+
+[Visita mi proyecto aquí](https://desafio-1-modulo-react.vercel.app/)
+
+---
+
 ## 🚀 Características (Features)
 * **Diseño Responsivo:** Adaptado para móviles y escritorio usando **React-Bootstrap**.
 * **Navegación Dinámica:** Navbar con renderizado condicional (Login/Register vs Profile/Logout).
