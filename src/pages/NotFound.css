@@ -1,0 +1,57 @@
+.not-found-container {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f8f9fa; /* Fondo claro minimalista */
+}
+
+.not-found-title {
+  font-size: 8rem;
+  font-weight: 900;
+  color: #343a40;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.not-found-emoji {
+  font-size: 5rem;
+  margin: 20px 0;
+  animation: float 3s ease-in-out infinite;
+}
+
+.not-found-subtitle {
+  font-size: 1.5rem;
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+
+.not-found-text {
+  color: #adb5bd;
+  margin-bottom: 2rem;
+}
+
+.not-found-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ff5733; /* Color pizza/marca */
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.not-found-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 87, 51, 0.3);
+  color: white;
+}
+
+/* Animación sutil para el emoji */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}

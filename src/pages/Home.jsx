@@ -1,4 +1,4 @@
-import Header from './Header.jsx'
+import Header from '../components/Header.jsx'
 import CardPizza from './CardPizza.jsx'
 import { useEffect, useState } from 'react'
 
