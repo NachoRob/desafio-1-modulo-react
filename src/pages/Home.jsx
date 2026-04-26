@@ -8,7 +8,7 @@ const Home = () => {
     const consultarApi = async () => {
 
         try {
-        const url = "http://localhost:5001/api/pizzas";
+        const url = "https://api-backend-pizza-mama-mia.onrender.com/api/pizzas";
         const response = await fetch(url);
         const data = await response.json();
         setPizzaCard(data);
