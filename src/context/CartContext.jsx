@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { useState, createContext } from "react";
 
 export const CartContext = createContext();
 
@@ -6,6 +6,7 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const addToCart = (pizza) => {
+    console.log("Intentando añadir la pizza:", pizza.name);
     const found = cart.find((item) => item.id === pizza.id);
 
     if (found) {

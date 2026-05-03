@@ -8,6 +8,7 @@ const Home = () => {
   const [pizzaCard, setPizzaCard] = useState([]);
   const [error, setError] = useState(null);
   const { addToCart } = useContext(CartContext);
+  const { pizzas } = useContext(PizzaContext);
   const consultarApi = async () => {
     try {
       const url = "https://api-backend-pizza-mama-mia.onrender.com/api/pizzas";
@@ -29,8 +30,8 @@ const Home = () => {
         <Header />
       </div>
       <div className="pizza-cards-container">
-        {pizzaCard.map((data) => (
-          <CardPizza key={data.id} {...pizza} onAdd={() => addToCart(data)} />
+        {pizzaCard.map((pizza) => (
+          <CardPizza key={pizza.id} {...pizza} onAdd={() => addToCart(pizza)} />
         ))}
       </div>
     </>

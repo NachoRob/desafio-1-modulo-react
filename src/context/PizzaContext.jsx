@@ -4,17 +4,17 @@ export const PizzaContext = createContext();
 
 export const PizzaProvider = ({ children }) => {
   const [pizzas, setPizzas] = useState([]);
-  const url = "https://api-backend-pizza-mama-mia.onrender.com/api/pizzas"
+  const url = "https://api-backend-pizza-mama-mia.onrender.com/api/pizzas";
 
-  const getPizzas = () => {
+  const getPizzas = async () => {
     const response = await fetch(url);
     const data = await response.json();
     setPizzas(data);
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     getPizzas();
-  },[]);
+  }, []);
 
   return <PizzaContext.Provider value={{}}>{children}</PizzaContext.Provider>;
 };

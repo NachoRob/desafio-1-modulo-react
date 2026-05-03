@@ -2,7 +2,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import ListGroup from "react-bootstrap/ListGroup";
 
-const CardPizza = ({ name, price, ingredients, img }) => {
+const CardPizza = ({ name, price, ingredients, img, onAdd }) => {
   return (
     <Card className="mx-auto my-3">
       <Card.Img variant="top" src={img} />
@@ -27,7 +27,7 @@ const CardPizza = ({ name, price, ingredients, img }) => {
             <Button variant="outline-dark" size="sm">
               Ver Más 👀
             </Button>
-            <Button variant="dark" size="sm">
+            <Button variant="dark" size="sm" onClick={() => onAdd()}>
               Añadir 🛒
             </Button>
           </div>
