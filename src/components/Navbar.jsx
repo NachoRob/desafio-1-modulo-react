@@ -3,6 +3,7 @@ import { useContext } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
+import { CartContext } from "../context/CartContext";
 
 const Navigationbar = () => {
   const { total } = useContext(CartContext);
