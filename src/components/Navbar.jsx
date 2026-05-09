@@ -4,10 +4,12 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import { CartContext } from "../context/CartContext";
+import { UserContext } from "../context/UserContext";
 
 const Navigationbar = () => {
   const { total } = useContext(CartContext);
-  const token = false;
+  const { token, logout } = useContext(UserContext);
+
   return (
     <Navbar variant="dark" expand="lg" className="mi-navbar">
       <Container>
@@ -25,7 +27,7 @@ const Navigationbar = () => {
                 <Nav.Link as={Link} to="/profile">
                   🔓 Profile
                 </Nav.Link>
-                <Nav.Link as={Link} to="/logout">
+                <Nav.Link onClick={logout} style={{ cursor: "pointer" }}>
                   🔒 Logout
                 </Nav.Link>
               </>

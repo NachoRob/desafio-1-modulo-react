@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { UserContext } from "../context/UserContext";
 import { CartContext } from "../context/CartContext";
 import { pizzas } from "../pizzas";
 import Button from "react-bootstrap/Button";
@@ -6,6 +7,8 @@ import Button from "react-bootstrap/Button";
 const Cart = () => {
   const { cart, aumentarCantidad, disminuirCantidad, total } =
     useContext(CartContext);
+
+  const { token } = useContext(UserContext);
 
   return (
     <div className="container mt-5">
@@ -52,9 +55,14 @@ const Cart = () => {
 
         <div className="mt-4">
           <h2 className="fw-bold">Total: ${total.toLocaleString()}</h2>
-          <Button variant="dark" className="mt-2">
+          <Button variant="dark" className="mt-2" disabled={!token}>
             Pagar
           </Button>
+          {!token && (
+            <p className="text-danger mt-2 small">
+              Debes iniciar sesión para realizar el pago.
+            </p>
+          )}
         </div>
       </div>
     </div>

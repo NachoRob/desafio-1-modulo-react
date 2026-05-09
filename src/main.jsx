@@ -5,13 +5,16 @@ import { PizzaProvider } from "./context/PizzaContext"; // Ajusta la ruta si es 
 import { CartProvider } from "./context/CartContext";
 import "./index.css";
 import App from "./App.jsx";
+import UserProvider from "./context/UserContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <PizzaProvider>
         <CartProvider>
-          <App />
+          <UserProvider>
+            <App />
+          </UserProvider>
         </CartProvider>
       </PizzaProvider>
     </BrowserRouter>

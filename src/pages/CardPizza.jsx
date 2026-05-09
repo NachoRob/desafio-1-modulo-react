@@ -2,8 +2,16 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import ListGroup from "react-bootstrap/ListGroup";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 const CardPizza = ({ id, name, price, ingredients, img }) => {
+  const { addToCart } = useContext(CartContext);
+
+  const handleAdd = () => {
+    // Ahora usamos addToCart, que coincide con tu Contexto
+    addToCart({ id, name, price, ingredients, img });
+  };
   return (
     <Card className="mx-auto my-3">
       <Card.Img variant="top" src={img} />
@@ -30,7 +38,7 @@ const CardPizza = ({ id, name, price, ingredients, img }) => {
                 Ver Más 👀
               </Button>
             </Link>
-            <Button variant="dark" size="sm">
+            <Button variant="dark" size="sm" onClick={handleAdd}>
               Añadir 🛒
             </Button>
           </div>
