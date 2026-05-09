@@ -9,21 +9,21 @@ import CardPizza from "./pages/CardPizza";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Pizza from "./pages/Pizza";
 import "./App.css";
 
 function App() {
   return (
     <>
-    <div className="d-flex flex-column min-vh-100">
-    <Navigationbar />
+      <div className="d-flex flex-column min-vh-100">
+        <Navigationbar />
         <main className="flex-grow-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/pizza/p001" element={<CardPizza />} />
+            <Route path="/pizza/:id" element={<Pizza />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/404" element={<NotFound />} />
             <Route path="*" element={<NotFound />} />

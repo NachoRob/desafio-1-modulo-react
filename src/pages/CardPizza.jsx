@@ -1,8 +1,9 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import ListGroup from "react-bootstrap/ListGroup";
+import { Link } from "react-router-dom";
 
-const CardPizza = ({ name, price, ingredients, img, onAdd }) => {
+const CardPizza = ({ id, name, price, ingredients, img }) => {
   return (
     <Card className="mx-auto my-3">
       <Card.Img variant="top" src={img} />
@@ -24,10 +25,12 @@ const CardPizza = ({ name, price, ingredients, img, onAdd }) => {
           <h4 className="fw-bold">Precio: ${price.toLocaleString()}</h4>
           <div className="d-flex justify-content-around mt-3">
             {/* Botones que por ahora no hacen nada */}
-            <Button variant="outline-dark" size="sm">
-              Ver Más 👀
-            </Button>
-            <Button variant="dark" size="sm" onClick={() => onAdd()}>
+            <Link to={`/pizza/${id}`}>
+              <Button variant="outline-dark" size="sm">
+                Ver Más 👀
+              </Button>
+            </Link>
+            <Button variant="dark" size="sm">
               Añadir 🛒
             </Button>
           </div>
