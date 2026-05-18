@@ -32,11 +32,13 @@ const Home = () => {
       <div className="container my-5">
         <div className="row g-4">
           {pizzaCard.map((pizza) => (
-            <CardPizza
-              key={pizza.id}
-              {...pizza}
-              onAdd={() => addToCart(pizza)}
-            />
+            <div key={pizza.id} className="col-6 col-md-4 col-lg-3 col-xl-2">
+              <CardPizza
+                key={pizza.id}
+                {...pizza}
+                onAdd={() => addToCart(pizza)}
+              />
+            </div>
           ))}
         </div>
       </div>
