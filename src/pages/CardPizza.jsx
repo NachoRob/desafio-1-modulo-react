@@ -13,7 +13,7 @@ const CardPizza = ({ id, name, price, ingredients, img }) => {
     addToCart({ id, name, price, ingredients, img });
   };
   return (
-    <Card className="mx-auto my-3">
+    <Card className="h-100 w-100">
       <Card.Img variant="top" src={img} />
 
       <Card.Body>

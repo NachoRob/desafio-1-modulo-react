@@ -29,10 +29,16 @@ const Home = () => {
       <div className="hero-pizza">
         <Header />
       </div>
-      <div className="pizza-cards-container">
-        {pizzaCard.map((pizza) => (
-          <CardPizza key={pizza.id} {...pizza} onAdd={() => addToCart(pizza)} />
-        ))}
+      <div className="container my-5">
+        <div className="row g-4">
+          {pizzaCard.map((pizza) => (
+            <CardPizza
+              key={pizza.id}
+              {...pizza}
+              onAdd={() => addToCart(pizza)}
+            />
+          ))}
+        </div>
       </div>
     </>
   );
