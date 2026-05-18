@@ -14,7 +14,11 @@ const CardPizza = ({ id, name, price, ingredients, img }) => {
   };
   return (
     <Card className="h-100 w-100">
-      <Card.Img variant="top" src={img} />
+      <Card.Img
+        variant="top"
+        src={img}
+        style={{ height: "150px", objectFit: "cover" }}
+      />
 
       <Card.Body>
         <Card.Title className="fw-bold fs-4">Pizza {name}</Card.Title>
